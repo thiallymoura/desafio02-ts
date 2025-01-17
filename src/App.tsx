@@ -1,31 +1,55 @@
-import { 
+import React from 'react';
+import { Header } from './components/Header/Header';
+import { Card } from './components/Card';
+import {LoginForm} from './components/LoginForm';
+import {
   Center,
   ChakraProvider,
-  Input,
   Box,
-  Button
 } from '@chakra-ui/react'
 import { login } from './services/login';
+
 
 function App() {
   return (
     <ChakraProvider>
+      <Header />
       <Box minHeight='100vh' backgroundColor='#9413dc' padding='25px'>
-        <Box backgroundColor='#FFFFFF' borderRadius='25px' padding='15px' >
-          <Center>
-            <h1>Faça o login</h1>
-          </Center>
-          <Input placeholder="email" />
-          <Input placeholder="password" />
-          <Center>
-            <Button onClick={login} colorScheme='teal' size='sm' width='100%' marginTop='5px'>
-              Button
-            </Button>
-          </Center>
-        </Box>
+        <Box />
+        <Card>
+            <h1 style={{ fontSize: "1.5rem", margin: "0 auto", marginBottom: "20px", fontWeight: "bold", color: "#333", }}>Login</h1>
+            <Center>
+              <LoginForm />
+            </Center>
+          </Card>
       </Box>
     </ChakraProvider>
   );
 }
 
 export default App;
+
+
+{/* <Input
+placeholder="Digite seu email"
+margin='0 auto'
+variant="filled"
+width="80%"
+alignItems="center"
+marginBottom="10px" />
+<Input placeholder="Digite sua senha"
+variant="filled"
+margin='0 auto'
+width="80%"
+marginBottom="10px"
+focusBorderColor="teal.400" />
+<Center>
+<Button onClick={login}
+  colorScheme='teal'
+  size='sm'
+  width='80%'
+  height={'40px'}
+  marginTop='5px'
+>
+  Entrar
+</Button> */}
