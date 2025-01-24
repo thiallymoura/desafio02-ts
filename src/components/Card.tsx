@@ -14,10 +14,10 @@ export const Card: React.FC<CardProps> = ({ children }) => {
       flexDirection="column"
       gap="10px"
       borderRadius="25px"
-      maxWidth='350px'
+      maxWidth='390px'
       height='300px'
-      margin='120px auto'
       padding="15px"
+      margin='190px auto'
       boxShadow="lg"
     >
       {children}
@@ -28,6 +28,27 @@ export const Card: React.FC<CardProps> = ({ children }) => {
 
 
 
+
+
+// export const Card: React.FC<CardProps> = ({ children }) => {
+//   return (
+//     <Box
+//       backgroundColor="#ffffff"
+//       display="flex"
+//       justifyContent="center"
+//       flexDirection="column"
+//       gap="10px"
+//       borderRadius="25px"
+//       maxWidth='350px'
+//       height='300px'
+//       margin='120px auto'
+//       padding="15px"
+//       boxShadow="lg"
+//     >
+//       {children}
+//     </Box>
+//   );
+// };
 
 
 

@@ -1,18 +1,45 @@
-import React from 'react';
-import { Header } from './components/Header/Header';
-import { Card } from './components/Card';
-import {LoginForm} from './components/LoginForm';
+import React, { createContext } from 'react';
+import { Header } from './components/Header';
 import {
-  Center,
-  ChakraProvider,
-  Box,
-} from '@chakra-ui/react'
-import { login } from './services/login';
 
+  Box,
+  ChakraProvider,
+
+} from '@chakra-ui/react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import { AppContextProvider } from './components/AppContext';
+import MainRoutes from './routes';
+import { createLocalStorage, getAllLocalStorage } from './services/storage';
 
 function App() {
+   
+  if(!getAllLocalStorage()){ // Verifica se o localStorage existe
+    createLocalStorage(); // Cria o localStorage
+  }
+  
+
   return (
-    <ChakraProvider>
+    <BrowserRouter>
+      <AppContextProvider>
+        <ChakraProvider>
+          <Layout>
+            <MainRoutes />
+          </Layout>
+        </ChakraProvider>
+      </AppContextProvider>
+    </BrowserRouter>
+
+  );
+}
+
+export default App;
+
+
+
+
+
+{/* <ChakraProvider>
       <Header />
       <Box minHeight='100vh' backgroundColor='#9413dc' padding='25px'>
         <Box />
@@ -23,33 +50,4 @@ function App() {
             </Center>
           </Card>
       </Box>
-    </ChakraProvider>
-  );
-}
-
-export default App;
-
-
-{/* <Input
-placeholder="Digite seu email"
-margin='0 auto'
-variant="filled"
-width="80%"
-alignItems="center"
-marginBottom="10px" />
-<Input placeholder="Digite sua senha"
-variant="filled"
-margin='0 auto'
-width="80%"
-marginBottom="10px"
-focusBorderColor="teal.400" />
-<Center>
-<Button onClick={login}
-  colorScheme='teal'
-  size='sm'
-  width='80%'
-  height={'40px'}
-  marginTop='5px'
->
-  Entrar
-</Button> */}
+    </ChakraProvider> */}
