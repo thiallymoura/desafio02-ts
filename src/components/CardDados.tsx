@@ -22,6 +22,25 @@ const CardDados = ({ mainContent, content}: ICardDados) => {
 export default CardDados;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const ContaInfo = () => {
 //     return (
 //         <Center>

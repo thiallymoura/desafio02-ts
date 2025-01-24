@@ -46,6 +46,27 @@ const ContaInfo = () => {
 
 export default ContaInfo;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import { Box, Center, SimpleGrid, Text } from "@chakra-ui/react"
 
 // const ContaInfo = () => {

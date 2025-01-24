@@ -51,7 +51,7 @@ const Home = () => {
     };
 
     // const handleLogin = () => {
-    //     welcomeMessage(email);
+    //     welcomeMessage(email); 
     // };
     return (
         <Box minHeight='100vh' background='teal' padding='25px'>
