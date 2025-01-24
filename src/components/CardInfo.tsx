@@ -3,7 +3,6 @@ import { Box, Text } from "@chakra-ui/react"
 interface ICardInfo{ 
     mainContent: string,
     content: string
-
 }
 
 const CardInfo = ({ mainContent, content}: ICardInfo) => {
@@ -21,3 +20,5 @@ const CardInfo = ({ mainContent, content}: ICardInfo) => {
 }
 
 export default CardInfo;
+
+

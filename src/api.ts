@@ -2,7 +2,7 @@ const conta = {
     email: 'thially@dio.bank',
     password: 'senha123',
     name: 'Thially Moura',
-    balance: 2000.00,
+    balance: 20000.00,
     id: '1'
 }
 

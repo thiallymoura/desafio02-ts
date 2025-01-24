@@ -12,7 +12,7 @@ interface userData {
     balance: number;
     id: string;
 }
-
+ 
 const Conta = () => {
     const [userData, setUserData] = useState<null | userData>();
     const { id } = useParams(); //destruturando para pegar o id
@@ -43,7 +43,7 @@ const Conta = () => {
         <Center>
             <SimpleGrid columns={2} spacing={8} paddingTop={100}>
                 {
-                    userData === undefined || userData === null ?
+                    userData === undefined || userData === null ? 
                     (
                         <Center>
                             <Spinner size="xl" color="white" />
@@ -51,9 +51,9 @@ const Conta = () => {
                     ) :
                     (
                         <>
-                            <CardInfo mainContent={`Bem vinda ${userData?.name}`} content={`${actualData.getDate()} / ${actualData.getMonth()} / ${actualData.getFullYear()} ${actualData.getHours()} :${actualData.getMinutes()}`} />
+                            <CardInfo mainContent={`Olá, ${userData.name}`} content={`Acesso: ${actualData.getDate()}/${(actualData.getMonth()+1).toString().padStart(2, "0")}/${actualData.getFullYear()} ${actualData.getHours()}:${actualData.getMinutes()}`} />
 
-                            <CardInfo mainContent="Saldo" content={`R$ ${userData.balance}`} />
+                            <CardInfo mainContent="Saldo em conta" content={`R$ ${userData.balance}`} />
 
                         </>
 
@@ -66,3 +66,10 @@ const Conta = () => {
 }
 
 export default Conta;
+
+
+
+
+
+
+//${userData?.name}

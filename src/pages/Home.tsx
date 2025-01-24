@@ -47,7 +47,7 @@ const Home = () => {
     
         setIsLoggedIn(true);
         changeLocalStorage({ login: true }); // Altera o localStorage 
-        navigate('conta/1'); 
+        navigate('/infoconta'); // Redireciona para a rota '/infoconta'
     };
 
     // const handleLogin = () => {

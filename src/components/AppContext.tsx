@@ -2,7 +2,8 @@ import { createContext, useEffect, useState } from "react";
 import { createLocalStorage, getAllLocalStorage } from "../services/storage";
 
 interface IAppContext {
-    user: string, // O usuário
+    name: string, // O usuário
+    email: string,
     isLoggedIn: boolean, // Se o usuário está logado
     setIsLoggedIn: ( isLoggedIn: boolean) => void // Função para atualizar o estado
 }
@@ -21,11 +22,12 @@ export const AppContextProvider = ({ children }: any) => {
         }
     }, [])
 
-    const user = 'Thi';
+    const name = 'Thially Moura';
+    const email = 'thially@dio.bank';
     
 
     return (
-        <AppContext.Provider value={{ user, isLoggedIn, setIsLoggedIn }}>
+        <AppContext.Provider value={{ name, email, isLoggedIn, setIsLoggedIn }}>
             {children}
         </AppContext.Provider>
 
