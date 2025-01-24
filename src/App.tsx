@@ -15,7 +15,7 @@ import { createLocalStorage, getAllLocalStorage } from './services/storage';
 function App() {
    
   if(!getAllLocalStorage()){ // Verifica se o localStorage existe
-    createLocalStorage(); // Cria o localStorage
+    createLocalStorage(); // Cria o localStorage 
   }
   
 

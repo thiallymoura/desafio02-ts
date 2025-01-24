@@ -15,7 +15,7 @@ describe('storage', () => {
         expect(mockGetItem).toHaveBeenCalledWith('diobank') // Verifica se foi chamada
     })
 
-
+ 
     it('Deve criar o objeto no localStorage', () => {
         const mockSetItem = jest.spyOn(Storage.prototype, 'setItem')
         createLocalStorage()

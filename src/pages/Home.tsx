@@ -33,7 +33,7 @@ const Home = () => {
 
         setIsLoggedIn(true);
         changeLocalStorage({login: true}); // Altera o localStorage 
-        navigate('conta/1');
+        navigate('conta/1'); 
     };
 
     // const handleLogin = () => {

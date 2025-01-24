@@ -17,4 +17,4 @@ export const createLocalStorage = (): void => {
 export const changeLocalStorage = (dioBank: IDDioBank) => {
     localStorage.setItem('diobank', JSON.stringify(dioBank));
     
-}
+} 
